@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	//- iframe(width="560" height="315" src="https://www.youtube.com/embed/CEpu2keRMwI" frameborder="0" allowfullscreen)
+	//- div(ng-view)
+
+	//- <audio controls ng-show = "data.showAudio"  class = "audio"> 
+	//- 	<source src ="{{data.headlinerSound}}">
+	//- </audio>
+	div(ng-repeat="data in list")
+		div(ng-click="clickAudio(data)")
+			p {{data.name}}
+		div(ng-show="data.showAudio")
+			p {{data.audio}}
+		hr
